@@ -18,9 +18,10 @@ android:hint="비밀번호 EditTextView"
 EditText안에 hint 속성으로 글씨를 써준다!
 이렇게 쓰면 미리보기 속성으로 글씨가 나오게 된다
 
+
 3. 회원가입시 정보가 다 채워졌는지 판별
 editText1 = findViewById(R.id.Edittext)
-        editText2 = findViewById(R.id.editText)
+ editText2 = findViewById(R.id.editText)
         editText3 = findViewById(R.id.editText2)
         
  button2.setOnClickListener {
