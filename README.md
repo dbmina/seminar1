@@ -50,7 +50,7 @@ button2.setOnClickListener { if (editText1?.length() != 0 && editText2?.length()
 텍스트뷰의 시작을 guideline으로 하고 싶으면 app:layout_constraintStart_toStartOf="@+id/guideline" 이런식으로 코드를 작성해주면 된다     
 
 
-**5. Recylcerview를 위해 필요한 것!! **     
+**5. Recylcerview의 component **     
 
 
 -반복적으로 보여질 아이템의 xml 작성 (activity_data.xml)    
@@ -59,3 +59,9 @@ button2.setOnClickListener { if (editText1?.length() != 0 && editText2?.length()
 -데이터를 각 아이템들에게 전달하는 역할인 Adapter 만들기 (ProfileAdapter)      
 -Recyclerview (activity_main3.xml)     
 -Adapter 추가      
+
+
+**RecyclerView 화면 구현**   
+
+<img src="https://user-images.githubusercontent.com/71162530/97656273-65d2ac00-1aaa-11eb-81af-ced1481088d0.png"  width="700" height="800">
+
