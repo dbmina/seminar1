@@ -30,6 +30,11 @@ button2.setOnClickListener { if (editText1?.length() != 0 && editText2?.length()
 또한 if 문안에 정보가 채워졌을 경우에만 intent 객체를 넘기면 사용자가 모든 정보를 입력했을때만 다른 화면으로 넘어가는 것을 구현할 수 있다
 
 
+**로그인, 회원가입 화면 구현**
+
+![Screenshot_20201030-110452](https://user-images.githubusercontent.com/71162530/97655053-8f3e0880-1aa7-11eb-9cec-b7d9e3c9441a.png)
+![Screenshot_20201030-110516](https://user-images.githubusercontent.com/71162530/97655056-9107cc00-1aa7-11eb-9bdc-7cb567a32ef4.png)
+
 **4. Recyclerview data 만들때 guideline 적용하기**
 
 
