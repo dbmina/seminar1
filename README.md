@@ -52,3 +52,11 @@ button2.setOnClickListener { if (editText1?.length() != 0 && editText2?.length()
 
 
 **5. Recylcerview를 위해 필요한 것!! **
+
+
+-반복적으로 보여질 아이템의 xml 작성 (activity_data.xml)
+-아이템에 대한 데이터 객체 만들기(ProfileData)
+-데이터 뷰에 쁘려주는 역할인 ViewHolder 만들기 (ProfileViewHolder)
+-데이터를 각 아이템들에게 전달하는 역할인 Adapter 만들기 (ProfileAdapter)
+-Recyclerview (activity_main3.xml)
+-Adapter 추가 
