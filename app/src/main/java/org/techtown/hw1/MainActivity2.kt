@@ -24,5 +24,10 @@ class MainActivity2 : AppCompatActivity() {
                 Toast.makeText(this, "빈칸이 있습니다", Toast.LENGTH_SHORT).show()
             }
         }
+        button2.setOnClickListener {
+            val intent = Intent(this, MainActivity3:: class.java)
+            startActivity(intent)
+        }
     }
+
 }
