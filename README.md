@@ -50,7 +50,7 @@ button2.setOnClickListener { if (editText1?.length() != 0 && editText2?.length()
 텍스트뷰의 시작을 guideline으로 하고 싶으면 app:layout_constraintStart_toStartOf="@+id/guideline" 이런식으로 코드를 작성해주면 된다     
 
 
-**5. Recylcerview의 component **     
+**5. Recyclerview의 component**
 
 
 -반복적으로 보여질 아이템의 xml 작성 (activity_data.xml)    
