@@ -1,6 +1,6 @@
 # seminar1
 
-<im
+
 **1. 다른 화면으로 이동할 경우**
 
 first_button.setOnClickListener{
@@ -29,15 +29,16 @@ editText1 = findViewById(R.id.Edittext)
  editText2 = findViewById(R.id.editText)
         editText3 = findViewById(R.id.editText2)
         
+        
  button2.setOnClickListener {
             if (editText1?.length() != 0 && editText2?.length() != 0 && editText3?.length() != 0) {
                 Toast.makeText(this, "회원가입성공", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainActivity3:: class.java)
                 startActivity(intent)
-                
             } else {
                 Toast.makeText(this, "빈칸이 있습니다", Toast.LENGTH_SHORT).show()
             }
+            
             
  각각의 editText를 findViewByID로 해서 받아온 이후 length()를 사용하여 사용자가 정보를 입력했는지 판별     
  
