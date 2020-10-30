@@ -1,6 +1,6 @@
 # seminar1
 
-**1. 다른 화면으로 이동할 경우**
+#**1. 다른 화면으로 이동할 경우**#
 
 first_button.setOnClickListener{ val Intent= Intent(this,MainActivity2::class.java ) startActivity(Intent)   
 
