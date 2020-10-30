@@ -1,7 +1,7 @@
 # seminar1
 
 
-#**1. 다른 화면으로 이동할 경우**
+##**1. 다른 화면으로 이동할 경우**
 
 first_button.setOnClickListener{
             val Intent= Intent(this,MainActivity2::class.java )
@@ -14,7 +14,7 @@ Intent 객체를 만들어서 이동하고 싶은 Activity를 적어준다!
 
 
 
-#**2. 미리보기 글씨 만들기**
+###**2. 미리보기 글씨 만들기**
 
 android:hint="비밀번호 EditTextView"
 
@@ -23,7 +23,8 @@ EditText안에 hint 속성으로 글씨를 써준다!
 
 
 
-#**3. 회원가입시 정보가 다 채워졌는지 판별**
+####**3. 회원가입시 정보가 다 채워졌는지 판별**
+
 editText1 = findViewById(R.id.Edittext)
  editText2 = findViewById(R.id.editText)
         editText3 = findViewById(R.id.editText2)
