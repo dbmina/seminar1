@@ -1,7 +1,7 @@
 # seminar1
 
 
-##**1. 다른 화면으로 이동할 경우**
+**1. 다른 화면으로 이동할 경우**
 
 first_button.setOnClickListener{
             val Intent= Intent(this,MainActivity2::class.java )
@@ -14,7 +14,7 @@ Intent 객체를 만들어서 이동하고 싶은 Activity를 적어준다!
 
 
 
-###**2. 미리보기 글씨 만들기**
+**2. 미리보기 글씨 만들기**
 
 android:hint="비밀번호 EditTextView"
 
@@ -23,7 +23,7 @@ EditText안에 hint 속성으로 글씨를 써준다!
 
 
 
-####**3. 회원가입시 정보가 다 채워졌는지 판별**
+**3. 회원가입시 정보가 다 채워졌는지 판별**
 
 editText1 = findViewById(R.id.Edittext)
  editText2 = findViewById(R.id.editText)
@@ -37,3 +37,22 @@ editText1 = findViewById(R.id.Edittext)
             }
             
  각각의 editText를 findViewByID로 해서 받아온 이후 length()를 사용하여 사용자가 정보를 입력했는지 판별     
+
+
+**4. Recyclerview data 만들때 guideline 적용하기**
+각각의 데이터를 라인에 맞추어 정리하고 싶으면 guideline을 사용하는 방법이 있다.
+<androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="167dp" />
+        
+이런식으로 guideline 코드를 작성해준 뒤, 
+
+텍스트뷰의 시작을 guideline으로 하고 싶으면
+app:layout_constraintStart_toStartOf="@+id/guideline"
+이런식으로 코드를 작성해주면 된다
+
+
+**5. Recylcerview를 위해 필요한 것!! **
