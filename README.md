@@ -22,7 +22,10 @@ EditText안에 hint 속성으로 글씨를 써준다! 이렇게 쓰면 미리보
 
 editText1 = findViewById(R.id.Edittext) editText2 = findViewById(R.id.editText) editText3 = findViewById(R.id.editText2)
 
-button2.setOnClickListener { if (editText1?.length() != 0 && editText2?.length() != 0 && editText3?.length() != 0) { Toast.makeText(this, "회원가입성공", Toast.LENGTH_SHORT).show() val intent = Intent(this, MainActivity3:: class.java) startActivity(intent) } else { Toast.makeText(this, "빈칸이 있습니다", Toast.LENGTH_SHORT).show() }   
+button2.setOnClickListener { if (editText1?.length() != 0 && editText2?.length() != 0 && editText3?.length() != 0) {    
+Toast.makeText(this, "회원가입성공", Toast.LENGTH_SHORT).show() val intent = Intent(this, MainActivity3:: class.java) startActivity(intent) }    
+
+else { Toast.makeText(this, "빈칸이 있습니다", Toast.LENGTH_SHORT).show() }   
 
 
 각각의 editText를 findViewByID로 해서 받아온 이후 length()를 사용하여 사용자가 정보를 입력했는지 판별    
@@ -43,7 +46,14 @@ button2.setOnClickListener { if (editText1?.length() != 0 && editText2?.length()
 **4. Recyclerview data 만들때 guideline 적용하기**
 
 
-각각의 데이터를 라인에 맞추어 정리하고 싶으면 guideline을 사용하는 방법이 있다. <androidx.constraintlayout.widget.Guideline android:id="@+id/guideline" android:layout_width="wrap_content" android:layout_height="wrap_content"  android:orientation="vertical" app:layout_constraintGuide_begin="167dp" />      
+각각의 데이터를 라인에 맞추어 정리하고 싶으면 guideline을 사용하는 방법이 있다.   
+
+<androidx.constraintlayout.widget.Guideline    
+android:id="@+id/guideline"    
+android:layout_width="wrap_content"    
+android:layout_height="wrap_content"   
+android:orientation="vertical"   
+app:layout_constraintGuide_begin="167dp" />         
 
 이런식으로 guideline 코드를 작성해준 뒤,     
 
@@ -63,5 +73,36 @@ button2.setOnClickListener { if (editText1?.length() != 0 && editText2?.length()
 
 **RecyclerView 화면 구현**   
 
-<img src="https://user-images.githubusercontent.com/71162530/97656273-65d2ac00-1aaa-11eb-81af-ced1481088d0.png"  width="700" height="800">
+<img src="https://user-images.githubusercontent.com/71162530/97656273-65d2ac00-1aaa-11eb-81af-ced1481088d0.png"  width="700" height="800">   
 
+
+**RecyclerView에서 각 item을 누르면 다른 화면으로 전환하는 것 구현 **
+
+-ProfileAdapter에 val itemClick: (ProfileData)->Unit 추가   
+
+class ProfileAdapter (private val context: Context, val itemClick: (ProfileData)->Unit): RecyclerView.Adapter<ProfileViewHolder>()   
+     
+  override fun onBindViewHolder(holder: ProfileViewHolder, position: Int) {
+        holder.onBind(data[position], itemClick)
+    }
+ 
+ onBindViewHolder에 itemCLick 추가
+ 
+     
+-ViewHolder의 class 수정 
+
+class ProfileViewHolder (itemView: View, itemClick:(ProfileData)->Unit): RecyclerView.ViewHolder(itemView)-
+   
+ onBind 함수 수정    
+ 
+fun onBind(data: ProfileData,itemClick:(ProfileData)->Unit){
+        title.text=data.title
+        subtitle.text=data.subtitle
+        itemView.setOnClickListener { itemClick(data) }
+    }
+    
+  -MainActivity3 class 수정   
+  
+  val profileAdapter=ProfileAdapter(this ){ProfileData->
+            startActivity(Intent(this, ItemActivity::class.java))
+        }
