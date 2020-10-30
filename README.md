@@ -31,9 +31,9 @@ button2.setOnClickListener { if (editText1?.length() != 0 && editText2?.length()
 
 
 **로그인, 회원가입 화면 구현**
-<img src="https://user-images.githubusercontent.com/71162530/97655053-8f3e0880-1aa7-11eb-9cec-b7d9e3c9441a.png"  width="700" height="370">
+<img src="https://user-images.githubusercontent.com/71162530/97655053-8f3e0880-1aa7-11eb-9cec-b7d9e3c9441a.png"  width="700" height="800">
+<img src="https://user-images.githubusercontent.com/71162530/97655056-9107cc00-1aa7-11eb-9bdc-7cb567a32ef4.png"  width="700" height="800">
 
-![Screenshot_20201030-110516](https://user-images.githubusercontent.com/71162530/97655056-9107cc00-1aa7-11eb-9bdc-7cb567a32ef4.png)
 
 **4. Recyclerview data 만들때 guideline 적용하기**
 
