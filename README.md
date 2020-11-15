@@ -142,8 +142,9 @@ activity file에 가서 각 탭을 클릭했을 때 일어나는 이벤트 처�
     위의 코드처럼 recyclerview를 구현한 것에서 약간의 수정만 해주면 가능하다. 
     
 **BottomNavigationView 구현예시**
+<img src="https://user-images.githubusercontent.com/71162530/99178207-12bc5280-2754-11eb-87c0-b1d5e463553d.gif"  width="500" height="700">
 
-    
+두번째 화면의 경우 recycler view이기 때문에 아래로 스크롤 하면 더 많은 화면이 등장한다! 
 **Tab Layout 구현방식**
 하단탭을 만들고 싶을때 bottom navigation view를 사용했다면, 상단탭을 만들기 위해서는 Tab layout을 사용하는 것이 일반적이다.
 이를 위해서는 xml 코드 안에
