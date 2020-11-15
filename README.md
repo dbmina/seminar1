@@ -76,7 +76,7 @@ app:layout_constraintGuide_begin="167dp" />
 <img src="https://user-images.githubusercontent.com/71162530/97656273-65d2ac00-1aaa-11eb-81af-ced1481088d0.png"  width="700" height="800">   
 
 
-**RecyclerView에서 각 item을 누르면 다른 화면으로 전환하는 것 구현**   
+**6. RecyclerView에서 각 item을 누르면 다른 화면으로 전환하는 것 구현**   
 
 -ProfileAdapter에 val itemClick: (ProfileData)->Unit 추가   
 
@@ -106,3 +106,6 @@ fun onBind(data: ProfileData,itemClick:(ProfileData)->Unit){
   val profileAdapter=ProfileAdapter(this ){ProfileData->
             startActivity(Intent(this, ItemActivity::class.java))
         }
+
+
+**Bottom navigation view, Tab layout 구현**
