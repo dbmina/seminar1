@@ -35,15 +35,15 @@ else { Toast.makeText(this, "빈칸이 있습니다", Toast.LENGTH_SHORT).show()
 
 **로그인 화면 구현**    
 
-<img src="https://user-images.githubusercontent.com/71162530/97655053-8f3e0880-1aa7-11eb-9cec-b7d9e3c9441a.png"  width="700" height="800">
+<img src="https://user-images.githubusercontent.com/71162530/97655053-8f3e0880-1aa7-11eb-9cec-b7d9e3c9441a.png"  width="600" height="800">
 
 
 **디자인을 고려하여 로그인 화면 구현**
-<img src="https://user-images.githubusercontent.com/71162530/99163889-72acfc00-2748-11eb-98c9-5f9fae43ee1d.png" width="700" height="800">
+<img src="https://user-images.githubusercontent.com/71162530/99163889-72acfc00-2748-11eb-98c9-5f9fae43ee1d.png" width="600" height="800">
 
 
 **회원가입 화면 구현**     
-<img src="https://user-images.githubusercontent.com/71162530/97655056-9107cc00-1aa7-11eb-9bdc-7cb567a32ef4.png"  width="700" height="800">
+<img src="https://user-images.githubusercontent.com/71162530/97655056-9107cc00-1aa7-11eb-9bdc-7cb567a32ef4.png"  width="600" height="800">
     
 
 **4. Recyclerview data 만들때 guideline 적용하기**
@@ -76,7 +76,7 @@ app:layout_constraintGuide_begin="167dp" />
 
 **RecyclerView 화면 구현**   
 
-<img src="https://user-images.githubusercontent.com/71162530/97656273-65d2ac00-1aaa-11eb-81af-ced1481088d0.png"  width="700" height="800">   
+<img src="https://user-images.githubusercontent.com/71162530/97656273-65d2ac00-1aaa-11eb-81af-ced1481088d0.png"  width="600" height="800">   
 
 
 **6. RecyclerView에서 각 item을 누르면 다른 화면으로 전환하는 것 구현**   
@@ -112,3 +112,4 @@ fun onBind(data: ProfileData,itemClick:(ProfileData)->Unit){
 
 
 **Bottom navigation view, Tab layout 구현**
+<img src="https://user-images.githubusercontent.com/71162530/99171466-aa1da780-274c-11eb-8c7c-5175ef12b91f.gif" width="600" height="800">
