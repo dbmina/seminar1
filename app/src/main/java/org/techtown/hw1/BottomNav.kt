@@ -23,7 +23,6 @@ class BottomNav : AppCompatActivity() {
         )
         sample_viewpager.adapter=viewpagerAdapter
 
-
         sample_viewpager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener{
             override fun onPageScrollStateChanged(state: Int) {}
             override fun onPageScrolled(

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main3.*
 import kotlinx.android.synthetic.main.fragment_second.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -20,20 +21,33 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class SecondFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val v = inflater.inflate(R.layout.fragment_second, container, false)
-        return v
+        return inflater.inflate(R.layout.fragment_second, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val profileAdapter=ProfileAdapter(context!! )
+
+        rcv.adapter=profileAdapter
+        rcv.layoutManager= LinearLayoutManager(context!!)
+        profileAdapter.data= mutableListOf(
+            ProfileData("이름", "안녕안녕"),
+            ProfileData("나이", "22"),
+            ProfileData("파트", "Android"),
+            ProfileData("Github","link in bio"),
+            ProfileData("음식", "떡볶이")
+        )
+
+        profileAdapter.notifyDataSetChanged()
+
     }
 
 }
+

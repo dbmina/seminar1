@@ -12,9 +12,7 @@ class MainActivity3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
 
-        val profileAdapter=ProfileAdapter(this ){
-            startActivity(Intent(this, ItemActivity::class.java))
-        }
+        val profileAdapter=ProfileAdapter(this )
         main_rcv.adapter=profileAdapter
         main_rcv.layoutManager= LinearLayoutManager(this)
         profileAdapter.data= mutableListOf(
