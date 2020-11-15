@@ -3,7 +3,6 @@ package org.techtown.hw1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main3.*
 
@@ -13,7 +12,7 @@ class MainActivity3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
 
-        val profileAdapter=ProfileAdapter(this ){ProfileData->
+        val profileAdapter=ProfileAdapter(this ){
             startActivity(Intent(this, ItemActivity::class.java))
         }
         main_rcv.adapter=profileAdapter
