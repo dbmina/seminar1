@@ -39,7 +39,7 @@ else { Toast.makeText(this, "빈칸이 있습니다", Toast.LENGTH_SHORT).show()
 
 
 **디자인을 고려하여 로그인 화면 구현**
-<img src="https://user-images.githubusercontent.com/71162530/99163091-2eb9f700-2748-11eb-88b5-4b4bad987556.png" width="700" height="800">
+<img src="https://user-images.githubusercontent.com/71162530/99163889-72acfc00-2748-11eb-98c9-5f9fae43ee1d.png" width="700" height="800">
 
 
 **회원가입 화면 구현**
