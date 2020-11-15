@@ -112,4 +112,50 @@ fun onBind(data: ProfileData,itemClick:(ProfileData)->Unit){
 
 
 **Bottom navigation view, Tab layout 구현**
-<img src="https://user-images.githubusercontent.com/71162530/99171466-aa1da780-274c-11eb-8c7c-5175ef12b91f.gif" width="600" height="800">
+먼저 bottom navigation view를 위해서는 원하는 개수만큼의 fragment를 만든 후 이를 convert to linear layout 시킨다. 
+다음 menu directory에 가서 원하는 아이템의 개수만큼 아이템의 태그를 넣어준다.
+각 아이템은 drawable 파일에서 resource file을 추가시켜주면 된다. 
+activity file에 가서 각 탭을 클릭했을 때 일어나는 이벤트 처리 listener를 설정해주는 것이 필요하다.
+또한 sample_bottom_navi_setOnNavigationItemSelectedListener{} 안에 각 아이템 별 인덱스를 설정해줌으로써, 뷰페이저의 current Item의 값을 변화시켜주는 것이 필요하다
+이렇게 하면 하단탭을 눌렀을때 작동은 잘 되지만 슬라이드 이후에 탭의 변경이 잘 되지 않기 때문에 ViewPager 페이지 변경에 대한 리스너가 필요하다
+이는 BottomNav kotlin file에 addOnPageChangeListener라는 함수를 통해서 구현하였다 
+
+**BottomNavigation 안에 recyclerview 구현하기 **
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val profileAdapter=ProfileAdapter(context!! )
+
+        rcv.adapter=profileAdapter
+        rcv.layoutManager= LinearLayoutManager(context!!)
+        profileAdapter.data= mutableListOf(
+            ProfileData("이름", "안녕안녕"),
+            ProfileData("나이", "22"),
+            ProfileData("파트", "Android"),
+            ProfileData("Github","link in bio"),
+            ProfileData("음식", "떡볶이")
+        )
+
+        profileAdapter.notifyDataSetChanged()
+
+    }
+    위의 코드처럼 recyclerview를 구현한 것에서 약간의 수정만 해주면 가능하다. 
+    
+**BottomNavigationView 구현예시**
+
+    
+**Tab Layout 구현방식**
+하단탭을 만들고 싶을때 bottom navigation view를 사용했다면, 상단탭을 만들기 위해서는 Tab layout을 사용하는 것이 일반적이다.
+이를 위해서는 xml 코드 안에
+<com.google.android.material.tabs.TabLayout 
+로 시작하는 tablayout을 적어주면 된다. 
+아니면 버튼처럼 끌어와서 위치시켜도 무방하다. 
+이후 각 탭을 작성했을 때 새로운 화면을 보여주고 싶다면 
+sample_tab.setupWithViewPager( sample_tab_viewpager) 
+sample_tab. apply{
+getTabAt 0 text =info
+getTabAt 1 text =others}
+이런식으로 코드를 넣어주면 된다
+
+**Tab layout 구현예시 ** 
+<img src="https://user-images.githubusercontent.com/71162530/99171466-aa1da780-274c-11eb-8c7c-5175ef12b91f.gif" width="500" height="700">
