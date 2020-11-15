@@ -160,6 +160,7 @@ getTabAt 0 text =info
 getTabAt 1 text =others}
 이런식으로 코드를 넣어주면 된다
 
+
 **Tab layout 구현예시 ** 
 
 <img src="https://user-images.githubusercontent.com/71162530/99171466-aa1da780-274c-11eb-8c7c-5175ef12b91f.gif" width="500" height="700">
