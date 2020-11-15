@@ -163,4 +163,5 @@ getTabAt 1 text =others}
 
 
 **Tab Layout 구현**
+
 <img src="https://user-images.githubusercontent.com/71162530/99171466-aa1da780-274c-11eb-8c7c-5175ef12b91f.gif" width="500" height="700">
