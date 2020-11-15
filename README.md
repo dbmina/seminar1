@@ -42,8 +42,7 @@ else { Toast.makeText(this, "빈칸이 있습니다", Toast.LENGTH_SHORT).show()
 <img src="https://user-images.githubusercontent.com/71162530/99163889-72acfc00-2748-11eb-98c9-5f9fae43ee1d.png" width="700" height="800">
 
 
-**회원가입 화면 구현**
-     
+**회원가입 화면 구현**     
 <img src="https://user-images.githubusercontent.com/71162530/97655056-9107cc00-1aa7-11eb-9bdc-7cb567a32ef4.png"  width="700" height="800">
     
 
