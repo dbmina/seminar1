@@ -167,5 +167,9 @@ getTabAt 1 text =others}
 <img src="https://user-images.githubusercontent.com/71162530/99171466-aa1da780-274c-11eb-8c7c-5175ef12b91f.gif" width="500" height="700">
 
 
+
+
 **POSTMAN 테스트 --서버에 이상이 없는지 체크 **
+<img src="https://user-images.githubusercontent.com/71162530/99907370-d1adda80-2d1f-11eb-82ce-bf1a59dc64f0.png" width="700" height="500">
+
 
