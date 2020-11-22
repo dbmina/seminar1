@@ -170,7 +170,7 @@ getTabAt 1 text =others}
 
 **POSTMAN 테스트 :서버에 이상이 없는지 체크 **
 <img src="https://user-images.githubusercontent.com/71162530/99907370-d1adda80-2d1f-11eb-82ce-bf1a59dc64f0.png" width="700" height="500">
-<img src=https://user-images.githubusercontent.com/71162530/99907533-8f38cd80-2d20-11eb-9ab5-a778937ce2fa.png" width="700" height="500">
+<img src="https://user-images.githubusercontent.com/71162530/99907533-8f38cd80-2d20-11eb-9ab5-a778937ce2fa.png" width="700" height="500">
 
 
 
