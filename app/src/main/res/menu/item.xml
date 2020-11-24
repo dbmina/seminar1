@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/menu_add"
+    android:icon="@drawable/add"
+    android:checked="false"
+    android:title="add"/>
+    <item
+        android:id="@+id/menu_alarm"
+        android:icon="@drawable/alarm"
+        android:checked="false"
+        android:title="alarm"/>
+    <item
+        android:id="@+id/menu_photo"
+        android:icon="@drawable/photo"
+        android:checked="false"
+        android:title="photo"/>
+
+
+</menu>
