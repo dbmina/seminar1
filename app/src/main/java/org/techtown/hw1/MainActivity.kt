@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main2.*
 import okhttp3.ResponseBody
 import org.json.JSONObject
 import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Response
-import javax.security.auth.callback.Callback
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,11 +19,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         first_button.setOnClickListener{
-          val call:Call<SampleResponseData>
-            val email=email.toString()
-            val password=password.toString()
+
+
+            val email_=email.text.toString()
+            val password_=password.text.toString()
+            val call :Call<SampleResponseData>
             call=SampleServiceImpl.service.postLogin(
-            SampleRequestData(email = email, password = password)
+            SampleRequestData(email = email_, password = password_)
             )
           call.enqueue(object :Callback<SampleResponseData>{
              override fun onFailure(call: Call<SampleResponseData>, t:Throwable){
@@ -54,6 +57,6 @@ class MainActivity : AppCompatActivity() {
         val ob=JSONObject(e.string())
         Toast.makeText(this, ob.getString("message"), Toast.LENGTH_SHORT).show()
     }
-    }
 
+    }
 
