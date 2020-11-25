@@ -185,7 +185,8 @@ interface SampleService{
     
       
 **싱글톤으로 만드는 구현체 코드**  
- 
+   
+
 object SampleServiceImpl {  
 
     private const val BASE_URL="http://15.164.83.210:3000"  
@@ -200,6 +201,7 @@ object SampleServiceImpl {
 }
 
 **Request Data 코드**
+
 
 data class SampleRequestData(  
 
@@ -217,6 +219,7 @@ data class SampleResponseData(
     val success: Boolean  
     
 ) {  
+
     data class Data(  
     
         val email: String,  
@@ -225,4 +228,45 @@ data class SampleResponseData(
     )  
 }
 
+**Main Activity Kotlin 파일 구성코드**
+   
+ override fun onCreate(savedInstanceState: Bundle?) {
+ 
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
+        first_button.setOnClickListener{
+
+
+            val email_=email.text.toString()
+            val password_=password.text.toString()
+            val call :Call<SampleResponseData>
+            call=SampleServiceImpl.service.postLogin(
+            SampleRequestData(email = email_, password = password_)
+            )
+          call.enqueue(object :Callback<SampleResponseData>{
+             override fun onFailure(call: Call<SampleResponseData>, t:Throwable){
+
+             }
+              override fun onResponse(
+                  call: Call<SampleResponseData>,
+                  response:Response<SampleResponseData>
+              ){
+                 response.takeIf { it.isSuccessful }
+                     ?.body()
+                     ?.let{it->
+                         Toast.makeText(this@MainActivity, "${it.data.userName}님, 안녕하세요", Toast.LENGTH_SHORT).show()
+                         Log.d("success", "통신성공")
+                         val intent=Intent(this@MainActivity, BottomNav::class.java)
+                         startActivity(intent)
+                     }?:showError(response.errorBody())
+              }
+          }
+          )
+
+
+        }
+
+
+
+        }
