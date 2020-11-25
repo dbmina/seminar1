@@ -167,10 +167,53 @@ getTabAt 1 text =others}
 <img src="https://user-images.githubusercontent.com/71162530/99171466-aa1da780-274c-11eb-8c7c-5175ef12b91f.gif" width="500" height="700">
 
 
-
 **POSTMAN 테스트 :서버에 이상이 없는지 체크 **
+
 <img src="https://user-images.githubusercontent.com/71162530/99907370-d1adda80-2d1f-11eb-82ce-bf1a59dc64f0.png" width="700" height="500">
 <img src="https://user-images.githubusercontent.com/71162530/99907533-8f38cd80-2d20-11eb-9ab5-a778937ce2fa.png" width="700" height="500">
 
+
+**Reftrofit Interface 구현 코드**
+interface SampleService{
+    @Headers("Content-Type:application/jason")
+    @POST("/users/signin")
+    fun postLogin(
+        @Body body: SampleRequestData
+    ):Call<SampleResponseData>
+}
+    
+    
+**싱글톤으로 만드는 구현체 코드**
+object SampleServiceImpl {
+    private const val BASE_URL="http://15.164.83.210:3000"
+    private val retrofit: Retrofit= Retrofit.Builder()
+        .baseUrl(BASE_URL)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+
+    val service: SampleService= retrofit.create(SampleService::class.java)
+}
+
+**Request Data 코드**
+
+data class SampleRequestData(
+    val email: String,
+    val password: String
+)
+
+**Response Data 코드**
+data class SampleResponseData(
+    val data: Data,
+    @SerializedName("message")
+    val message: String,
+    val status: Int,
+    val success: Boolean
+) {
+    data class Data(
+        val email: String,
+        val password: String,
+        val userName: String
+    )
+}
 
 
