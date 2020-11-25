@@ -174,46 +174,48 @@ getTabAt 1 text =others}
 
 
 **Reftrofit Interface 구현 코드**
-interface SampleService{
-    @Headers("Content-Type:application/jason")
-    @POST("/users/signin")
-    fun postLogin(
-        @Body body: SampleRequestData
-    ):Call<SampleResponseData>
+
+interface SampleService{  
+    @Headers("Content-Type:application/jason")  
+    @POST("/users/signin")  
+    fun postLogin(  
+        @Body body: SampleRequestData  
+    ):Call<SampleResponseData>  
 }
     
-    
-**싱글톤으로 만드는 구현체 코드**
-object SampleServiceImpl {
-    private const val BASE_URL="http://15.164.83.210:3000"
-    private val retrofit: Retrofit= Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
+      
+**싱글톤으로 만드는 구현체 코드**  
+ 
+object SampleServiceImpl {  
+    private const val BASE_URL="http://15.164.83.210:3000"  
+    private val retrofit: Retrofit= Retrofit.Builder()  
+        .baseUrl(BASE_URL)  
+        .addConverterFactory(GsonConverterFactory.create())  
+        .build()  
 
-    val service: SampleService= retrofit.create(SampleService::class.java)
+    val service: SampleService= retrofit.create(SampleService::class.java)  
 }
 
 **Request Data 코드**
 
-data class SampleRequestData(
-    val email: String,
-    val password: String
-)
+data class SampleRequestData(  
+    val email: String,  
+    val password: String  
+)  
 
-**Response Data 코드**
-data class SampleResponseData(
-    val data: Data,
-    @SerializedName("message")
-    val message: String,
-    val status: Int,
-    val success: Boolean
-) {
-    data class Data(
-        val email: String,
-        val password: String,
-        val userName: String
-    )
+**Response Data 코드**  
+data class SampleResponseData(  
+    val data: Data,  
+    @SerializedName("message")  
+    val message: String,  
+    val status: Int,  
+    val success: Boolean  
+) {  
+    data class Data(  
+        val email: String,  
+        val password: String,  
+        val userName: String  
+    )  
 }
 
 
