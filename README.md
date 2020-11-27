@@ -167,7 +167,7 @@ getTabAt 1 text =others}
 <img src="https://user-images.githubusercontent.com/71162530/99171466-aa1da780-274c-11eb-8c7c-5175ef12b91f.gif" width="500" height="700">
 
 
-**POSTMAN 테스트 :서버에 이상이 없는지 체크 **
+**POSTMAN 테스트 :서버에 이상이 없는지 체크**  
 
 <img src="https://user-images.githubusercontent.com/71162530/99907370-d1adda80-2d1f-11eb-82ce-bf1a59dc64f0.png" width="700" height="500">
 <img src="https://user-images.githubusercontent.com/71162530/99907533-8f38cd80-2d20-11eb-9ab5-a778937ce2fa.png" width="700" height="500">
@@ -274,7 +274,8 @@ data class SampleResponseData(
        }
        
        
-**서버통신의 결과**
+**서버통신의 결과**  
+
 값이 들어오지 않을 경우
 <img src="https://user-images.githubusercontent.com/71162530/100448359-7b60e300-30f5-11eb-9773-815bac6920ca.png" width="500" height="700">
 로그인 성공
