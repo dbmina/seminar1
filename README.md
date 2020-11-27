@@ -282,7 +282,8 @@ data class SampleResponseData(
 
 로그인 성공   
 
-<img src="https://user-images.githubusercontent.com/71162530/100449619-96cced80-30f7-11eb-88d7-3d473872136e.png" width="500" height="700">
+<img src="https://user-images.githubusercontent.com/71162530/100450865-b8c76f80-30f9-11eb-95b8-3a96797cd422.png" width="500" height="700">
+
 
 회원가입 성공  
 
