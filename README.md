@@ -276,5 +276,9 @@ data class SampleResponseData(
        
 **서버통신의 결과**
 <img src="https://user-images.githubusercontent.com/71162530/100448359-7b60e300-30f5-11eb-9773-815bac6920ca.png" width="500" height="700">
+로그인 성공
+<img src="https://user-images.githubusercontent.com/71162530/100449619-96cced80-30f7-11eb-88d7-3d473872136e.png" width="500" height="700">
+
+
 
 
