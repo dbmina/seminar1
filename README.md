@@ -270,3 +270,11 @@ data class SampleResponseData(
 
 
         }
+        
+       }
+       
+       
+**서버통신의 결과**
+<img src="https://user-images.githubusercontent.com/71162530/100448359-7b60e300-30f5-11eb-9773-815bac6920ca.png" width="500" height="700">
+
+
